@@ -1,14 +1,15 @@
 var hotel = {
-	name : 'Quay',
-	rooms : 40,
-	booked : 25,
-	checkAvailability: function() {
-		return this.rooms - this.booked;
+	nama: 'Quay',
+	jumlahRuang : 40,
+	terpakai : 15,
+
+	sisaRuang : function (){
+		return this.jumlahRuang - this.terpakai;
 	}
 };
 
-var elName = document.getElementById('hotelName');
-elName.textContent = hotel.name;
+var elNama = document.getElementById('hotelName');
+elNama.textContent = hotel.nama;
 
 var elRooms = document.getElementById('rooms');
-elRooms.textContent = hotel.checkAvailability() + ' rooms left';
+elRooms.textContent = hotel.sisaRuang();
